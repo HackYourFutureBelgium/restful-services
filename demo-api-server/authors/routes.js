@@ -16,7 +16,7 @@ router.get("", controller.welcome);
 router.get("/all", controller.get_all);
 
 /* ------------------- CREATE -------------------*/
-// GET  "/add"                => instructions 
+// GET  "/add"                => instructions
 // POST "/add"                => Create new author
 
 router.get("/add", controller.get_add);
@@ -29,7 +29,7 @@ router.post("/add", controller.post_add);
 router.get("/:id", controller.get_id);
 
 /* ------------------- UPDATE -------------------*/
-// GET  "/:id/update"     => instructions 
+// GET  "/:id/update"     => instructions
 // POST "/:id/update"     => update author with id...
 
 
@@ -39,9 +39,9 @@ router.get("/:id/update", controller.get_id_update);
 router.post("/:id/update", controller.post_id_update);
 
 /* ------------------- DELETE -------------------*/
-// GET  "/:id/delete"     => instructions 
+// GET  "/:id/delete"     => instructions
 // POST "/:id/delete"     => delete author with id...
- 
+
 
 
 router.get("/:id/delete", controller.get_id_delete);

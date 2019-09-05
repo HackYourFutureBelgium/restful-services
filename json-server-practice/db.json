@@ -1,0 +1,22 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "first_name": "schmanthila"
+    },
+    {
+      "first_name": "schmillian",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "longongongong booooook"
+    },
+    {
+      "title": "asdf",
+      "id": 2
+    }
+  ]
+}

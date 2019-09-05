@@ -15,9 +15,10 @@ So what does this have to do with anything?
 
 The ```db.json``` file is like your Mongo.db database, just objects and arrays of data!  If you keep this image in mind while you build your RESTful API it will be much easier to understand what is happening.
 
+The current example code in ```./demo-api-server``` has a few routes that don't match ```json-server```.  Can you figure out which ones they are? One of your assignments is to make sure that your API is indistinguishable from ```json-server```,
 
-The rest of the code in ```../demo-api-server``` is designed behave (almost) the same as ```json-server```.  Meaning that if you write your API correctly and open it in Postman, you wouldn't know if it was your code or ```json-server``` behind localhost!
-The current demo has a few routes that don't match ```json-server```.  can you figure out which ones they are? One of your assignments is to make sure that your API is indistinguishable from ```json-server```,
+
+Your task in ```./api-server``` is to write an API that behaves exactly the same as ```json-server```.  Meaning that if you write your API correctly and open it in Postman, you wouldn't know if it was your code or ```json-server``` behind localhost!
 
 ---
 ---

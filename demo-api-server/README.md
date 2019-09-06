@@ -3,7 +3,6 @@ An example api with (nearly) RESTful routes and data-centered services.
 To study this code:
 1. navigate to this directory in terminal
 1. ```npm install```
-1. ```npm install -g nodemon``` (if you don't have it yet)
 1. ```nodemon dev-server.js```
 1. Open [Postman](https://www.getpostman.com/)
 1. practice calling the API at ```localhost:3000```

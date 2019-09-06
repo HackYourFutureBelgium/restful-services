@@ -8,18 +8,18 @@ const controller = {};
 // GET  "/"                     => greetings
 
 controller.welcome = (req, res) => {
-  console.log("-- GET /all --");
+  console.log('-- GET /all --');
   res.send("hi, you're at the books api");
 }
 
 /* ------------------- INDEX -------------------*/
 // GET  "/all"                     => show all books
 
-controller.get_all = (req, res) => {
+controller.getAll = (req, res) => {
   console.log("-- GET /all --");
   books.find()
     // modify the next line based on your project's needs
-    .then((db_response) => { res.send(db_response) })
+    .then((dbResponse) => { res.send(dbResponse) })
     .catch((err) => {
       res.status(500).send({
         message: err.message
@@ -31,18 +31,18 @@ controller.get_all = (req, res) => {
 // GET  "/add"                => instructions
 // POST "/add"                => Create new books
 
-controller.get_add = (req, res) => {
+controller.getAdd = (req, res) => {
   console.log("-- GET /add --");
   res.send('put a new author\'s title in the body and send a post request to this address: { title: "string" }. you\'ll get back the new author\'s entry');
 }
 
-controller.post_add = (req, res) => {
+controller.postAdd = (req, res) => {
   console.log("-- POST /add --");
-  const new_title = req.body.title;
-  const new_author = { title: new_title };
-  books.create(new_author)
+  const newTitle = req.body.title;
+  const newAuthor = { title: newTitle };
+  books.create(newAuthor)
     // modify the next line based on your project's needs
-    .then((db_response) => { res.send(db_response) })
+    .then((dbResponse) => { res.send(dbResponse) })
     .catch((err) => {
       res.status(500).send({
         message: err.message
@@ -55,13 +55,13 @@ controller.post_add = (req, res) => {
 // GET  "/:id"             => View books Info with id ...
 
 
-controller.get_id = (req, res) => {
-  const author_id = req.params.id;
-  console.log("-- GET /" + author_id);
-  const id_object = { _id: author_id };
-  books.find(id_object)
+controller.getId = (req, res) => {
+  const authorId = req.params.id;
+  console.log("-- GET /" + authorId);
+  const idObject = { Id: authorId };
+  books.find(idObject)
     // modify the next line based on your project's needs
-    .then((db_response) => { res.send(db_response) })
+    .then((dbResponse) => { res.send(dbResponse) })
     .catch((err) => {
       res.status(500).send({
         message: err.message
@@ -76,21 +76,21 @@ controller.get_id = (req, res) => {
 // POST "/:id/update"     => update books with id...
 
 
-controller.get_id_update = (req, res) => {
-  const author_id = req.params.id;
-  console.log("-- GET /" + author_id + "/update --");
+controller.getIdUpdate = (req, res) => {
+  const authorId = req.params.id;
+  console.log("-- GET /" + authorId + "/update --");
   res.send('send a post request to this address a title in the body');
 }
 
-controller.post_id_update = (req, res) => {
-  const author_id = req.params.id;
-  console.log("-- POST /" + author_id + "/update --");
-  const id_object = { _id: author_id };
+controller.postIdUpdate = (req, res) => {
+  const authorId = req.params.id;
+  console.log("-- POST /" + authorId + "/update --");
+  const idObject = { Id: authorId };
   const title = req.body.title;
-  const title_object = { title: title };
-  books.update(id_object, title_object)
+  const titleObject = { title: title };
+  books.update(idObject, titleObject)
     // modify the next line based on your project's needs
-    .then((db_response) => { res.send(db_response) })
+    .then((dbResponse) => { res.send(dbResponse) })
     .catch((err) => {
       res.status(500).send({
         message: err.message
@@ -103,19 +103,19 @@ controller.post_id_update = (req, res) => {
 // POST "/:id/delete"     => delete books with id...
 
 
-controller.get_id_delete = (req, res) => {
-  const author_id = req.params.id;
-  console.log("-- GET /" + author_id + "/delete --");
+controller.getIdDelete = (req, res) => {
+  const authorId = req.params.id;
+  console.log("-- GET /" + authorId + "/delete --");
   res.send('send a post request to this address with an author ID, it will be deleted');
 }
 
-controller.post_id_delete = (req, res) => {
-  const author_id = req.params.id;
-  console.log("-- POST /" + author_id + "/delete --");
-  const id_object = { _id: author_id };
-  books.remove(id_object)
+controller.postIdDelete = (req, res) => {
+  const authorId = req.params.id;
+  console.log("-- POST /" + authorId + "/delete --");
+  const idObject = { _id: authorId };
+  books.remove(idObject)
     // modify the next line based on your project's needs
-    .then((db_response) => { res.send(db_response) })
+    .then((dbResponse) => { res.send(dbResponse) })
     .catch((err) => {
       res.status(500).send({
         message: err.message

@@ -1,5 +1,5 @@
 const express = require("express");
-const testing_app = express();
+const testingApp = express();
 const mongoose = require('mongoose');
 
 require('./config');
@@ -16,18 +16,18 @@ mongoose
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-testing_app.use(cors());
-testing_app.use(bodyParser.urlencoded({ extended: true }));
-testing_app.use(bodyParser.json());
+testingApp.use(cors());
+testingApp.use(bodyParser.urlencoded({ extended: true }));
+testingApp.use(bodyParser.json());
 
-testing_app.get('/api', (req, res) => {
+testingApp.get('/api', (req, res) => {
   res.json({ message: 'API ready' });
 });
 
-const api_services = require("./services");
-testing_app.use("/api", api_services);
+const apiServices = require("./services");
+testingApp.use("/api", apiServices);
 
 const port = process.env.PORT || 4000;
-testing_app.listen(port, () => {
+testingApp.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

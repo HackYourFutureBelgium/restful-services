@@ -13,20 +13,20 @@ router.get("", controller.welcome);
 /* ------------------- INDEX -------------------*/
 // GET  "/all"                     => show all books
 
-router.get("/all", controller.get_all);
+router.get("/all", controller.getAll);
 
 /* ------------------- CREATE -------------------*/
 // GET  "/add"                => instructions
 // POST "/add"                => Create new book
 
-router.get("/add", controller.get_add);
+router.get("/add", controller.getAdd);
 
-router.post("/add", controller.post_add);
+router.post("/add", controller.postAdd);
 
 /* ------------------- READ -------------------*/
 // GET  "/:id"             => View book Info with id ...
 
-router.get("/:id", controller.get_id);
+router.get("/:id", controller.getId);
 
 /* ------------------- UPDATE -------------------*/
 // GET  "/:id/update"     => instructions
@@ -34,9 +34,9 @@ router.get("/:id", controller.get_id);
 
 
 
-router.get("/:id/update", controller.get_id_update);
+router.get("/:id/update", controller.getIdUpdate);
 
-router.post("/:id/update", controller.post_id_update);
+router.post("/:id/update", controller.postIdUpdate);
 
 /* ------------------- DELETE -------------------*/
 // GET  "/:id/delete"     => instructions
@@ -44,9 +44,9 @@ router.post("/:id/update", controller.post_id_update);
 
 
 
-router.get("/:id/delete", controller.get_id_delete);
+router.get("/:id/delete", controller.getIdDelete);
 
-router.post("/:id/delete", controller.post_id_delete);
+router.post("/:id/delete", controller.postIdDelete);
 
 
 

@@ -2,7 +2,7 @@ In this folder you'll find a simple JSON file filled with data matching the sche
 
 You can use this folder to get a feel for how RESTful API's work (using [json-server](https://github.com/typicode/json-server)), and how NoSQL databases (ie. Mongo) store data:
 1. navigate to this directory in your terminal
-1. ```npm install -g json-server```
+1. ```npm install```
 1. ```json-server --watch db.json```
 1. open [Postman](https://www.getpostman.com/)
 1. practice calling a RESTful API at ```localhost:3000```

@@ -1,0 +1,14 @@
+{
+  "name": "json-server-practice",
+  "version": "1.0.0",
+  "description": "In this folder you'll find a simple JSON file filled with data matching the schemas from ```../demo-api-server```.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

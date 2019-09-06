@@ -14,20 +14,20 @@ mongoose
     process.exit();
   });
 
-const testing_app = express();
+const testingApp = express();
 
-testing_app.use(cors());
-testing_app.use(bodyParser.urlencoded({ extended: true }));
-testing_app.use(bodyParser.json());
+testingApp.use(cors());
+testingApp.use(bodyParser.urlencoded({ extended: true }));
+testingApp.use(bodyParser.json());
 
-testing_app.get('/', (req, res) => {
+testingApp.get('/', (req, res) => {
   res.json({ welcome: 'you are testing the books api' });
 });
 
 const books = require("./routes");
-testing_app.use("/", books);
+testingApp.use("/", books);
 
 const port = process.env.PORT || 4000;
-testing_app.listen(port, () => {
+testingApp.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

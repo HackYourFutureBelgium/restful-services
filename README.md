@@ -16,6 +16,12 @@ This repository contains 3 directories, we recommend stuyding them in this order
     * Careful! the example code in ```./demo-api-server``` doesn't quite have RESTful routes. be sure that your API implements the routes [described here](https://github.com/typicode/json-server)
 
 
+---
+
+## Helpful Links
+
+* Using Postman: [toolsqa](https://www.toolsqa.com/postman-tutorial/), [guru99](https://www.guru99.com/postman-tutorial.html)* [RESTful design guidelines](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
+
 
 ---
 ---

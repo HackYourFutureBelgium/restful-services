@@ -1,7 +1,8 @@
 const express = require("express");
 const testingApp = express();
 const mongoose = require('mongoose');
-
+const bodyParser = require('body-parser');
+const cors = require('cors');
 require('./config');
 
 mongoose.Promise = global.Promise;
@@ -13,12 +14,14 @@ mongoose
     process.exit();
   });
 
-const bodyParser = require('body-parser');
-const cors = require('cors');
 
 testingApp.use(cors());
 testingApp.use(bodyParser.urlencoded({ extended: true }));
 testingApp.use(bodyParser.json());
+
+testingApp.get('/', (req, res) => {
+  res.json({ message: 'the frontend would serve at this route, the api is in the /api route' });
+});
 
 testingApp.get('/api', (req, res) => {
   res.json({ message: 'API ready' });

@@ -1,4 +1,4 @@
-process.env.MONGODB_URL = "connection string from mlab goes here";
+process.env.MONGODB_URL = "mlab url goes here";
 process.env.PORT = 3000;
 
 console.log(`
